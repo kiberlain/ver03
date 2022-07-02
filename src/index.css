@@ -1,0 +1,45 @@
+.App {
+  padding: 0 3rem;
+}
+
+.Header {
+  padding: 2rem 0;
+}
+
+.Main {
+  display: flex;
+  gap: 2rem
+}
+
+.NavigationList {
+  margin: 0;
+  padding: 0;
+}
+
+.SectionHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.SectionTitle {
+  margin: 0;
+}
+
+.HeaderNavList,
+.SectionNavList {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.HeaderNavItem,
+.SectionNavItem,
+.NavigationItem {
+  list-style-type: none;
+}
+
+.HeaderNavItem:last-child {
+  margin-left: auto;
+}
