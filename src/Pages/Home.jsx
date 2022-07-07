@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import testData from "../testdata";
 
 export const Home = ({ themes }) => {
