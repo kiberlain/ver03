@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
+import testData from "../testdata";
 
 export const Home = ({ themes }) => {
   console.log(themes);
+  console.log(testData);
   return (
     <>
       <ol className="ThemesList">
-        {themes.map((post) => (
+        {testData.map((post) => (
           <li className="ThemesListItem" key={post.id}>
             <article className="Task">
               <header className="TaskHeader">
