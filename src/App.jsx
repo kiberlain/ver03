@@ -8,6 +8,7 @@ import Auth from "./Pages/Login";
 import Account from "./Pages/Account";
 import { Themes } from "./Pages/Themes";
 import { Users } from "./Pages/Users";
+import { CreateTheme } from "./Pages/CreateTheme";
 
 export default function App() {
   const [session, setSession] = useState(null);
@@ -43,6 +44,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home themes={themes} />} />
+          <Route path="new_theme" element={<CreateTheme session={session} />} />
           <Route path="login" element={<Auth />} />
           <Route path="account" element={<Account session={session} />} />
           <Route path="themes" element={<Themes />} />

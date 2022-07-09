@@ -1,13 +1,12 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { supabase } from "../client";
 import { Header } from "./Header";
 import { Aside } from "./Aside";
 
-import testData from "../testdata";
-
 export const Layout = () => {
   const [session, setSession] = useState(null);
+
   useEffect(() => {
     setSession(supabase.auth.session());
     supabase.auth.onAuthStateChange((_event, session) => {
@@ -18,7 +17,7 @@ export const Layout = () => {
   return (
     <>
       <Header session={session} />
-      <Aside data={testData} />
+      <Aside />
 
       <main className="Main Flex Flow">
         <div className="Wrapper">
@@ -33,7 +32,9 @@ export const Layout = () => {
                   <a className="NavLink">Завершённые</a>
                 </li>
                 <li className="SubnavItem">
-                  <a className="SubnavLink">Новая тема</a>
+                  <NavLink to="/new_theme" className="SubnavLink">
+                    Новая тема
+                  </NavLink>
                 </li>
               </ul>
             </nav>
