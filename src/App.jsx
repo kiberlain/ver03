@@ -44,7 +44,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home themes={themes} />} />
-          <Route path="new_theme" element={<CreateTheme session={session} />} />
+          <Route path="new_theme" element={<CreateTheme />} />
           <Route path="login" element={<Auth />} />
           <Route path="account" element={<Account session={session} />} />
           <Route path="themes" element={<Themes />} />

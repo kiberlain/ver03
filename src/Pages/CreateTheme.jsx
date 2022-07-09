@@ -3,9 +3,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { supabase } from "../client";
 
-export const CreateTheme = ({ session }) => {
+export const CreateTheme = () => {
   const user_id = supabase.auth.user().id;
-
   const create = async (postData) => {
     const user = supabase.auth.user();
 
