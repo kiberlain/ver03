@@ -1,8 +1,6 @@
 import testData from "../testdata";
 
 export const Home = ({ themes }) => {
-  console.log(themes);
-  console.log(testData);
   return (
     <>
       <ol className="ThemesList">
